@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        /* Centering the form */
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label, input, fieldset {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Visually hidden class for screen readers */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Extra form styling */
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>User Registration Form</h1>
+        <form action="#" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required aria-label="Full Name" aria-describedby="name-desc">
+            <span id="name-desc" class="sr-only">Enter your full name</span><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required aria-label="Email Address" aria-describedby="email-desc">
+            <span id="email-desc" class="sr-only">Enter a valid email address</span><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required aria-label="Password" aria-describedby="password-desc">
+            <span id="password-desc" class="sr-only">Enter a strong password</span><br>
+
+            <fieldset>
+                <legend>Gender:</legend>
+                <label><input type="radio" name="gender" value="male" required aria-label="Male"> Male</label>
+                <label><input type="radio" name="gender" value="female" aria-label="Female"> Female</label>
+                <label><input type="radio" name="gender" value="other" aria-label="Other"> Other</label>
+            </fieldset><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" aria-label="Date of Birth" aria-describedby="dob-desc">
+            <span id="dob-desc" class="sr-only">Select your date of birth</span><br>
+
+            <label><input type="checkbox" name="terms" required aria-label="I agree to the terms and conditions"> I agree to the Terms and Conditions</label><br><br>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
